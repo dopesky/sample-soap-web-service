@@ -2,7 +2,7 @@
 try {
 	if (!isset($_POST['admission_number'])) throw new SoapFault("STUDENT", "Please Input an Admission Number to Initiate the Search.");
 
-	$client = new SoapClient("http://localhost/Html/Soap/soap/SoapServer.php?wsdl", ['trace' => 1, 'soap_version' => SOAP_1_2]);
+	$client = new SoapClient("http://localhost/Html/WebServices/Soap/soap/SoapServer.php?wsdl", ['trace' => 1, 'soap_version' => SOAP_1_2]);
 	$student = $client->getStudent($_POST['admission_number']);
 	if (!$student) throw new SoapFault("STUDENT", "Student with Admission Number {$_POST['admission_number']} Not Found!");
 

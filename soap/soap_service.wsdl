@@ -54,7 +54,7 @@
     <service name="StudentService">
         <documentation>WSDL File for Fetching a Student by Admission Number</documentation>
         <port binding="tns:StudentBinding" name="StudentPort">
-            <soap:address location="http://localhost/Html/Soap/soap/SoapServer.php"/>
+            <soap:address location="http://localhost/Html/WebServices/Soap/soap/SoapServer.php"/>
         </port>
     </service>
 </definitions>
